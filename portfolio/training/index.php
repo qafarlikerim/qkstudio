@@ -64,6 +64,13 @@ require_once 'connect.php';
     }
 </style>
 <body>
+    <h2 class="red-text" style="color: red;" align="center">Biz yeni sayta köçdük --><a href="https://qkstudio.ml/">www.QkStudio.ml</a></h2>
+    <h2 class="red-text" style="color: red;" align="center" >Мы переехали на новый сайт --><a href="https://qkstudio.ml/">www.QkStudio.ml</a></h2>
+    <h2 class="red-text" style="color: red;" align="center" >We moved to a new site --><a href="https://qkstudio.ml/">www.QkStudio.ml</a></h2>
+  
+    <hr class="new5">
+    
+    <br>
     <table>
         <tr>
             <th>ID</th>
@@ -86,6 +93,18 @@ require_once 'connect.php';
                 <?php
             }
         ?>
-    </table>        
+    </table>
+    <div class="container">
+      <h1>Список контактов</h1>
+      <form action="/add.php" method="post">
+        <input type="text" name="name" id="name" placeholder="Введите имя..." class="form-control">
+        <br>
+        <input type="int" name="number" id="number" placeholder="Введите номер..." class="form-control">
+        <br>
+        <input type="date" name="date" id="date" placeholder="Введите дату..." class="form-control">
+        <br>
+        <button type="submit" name="sendTask" class="button button2">+</button>&nbsp;<button type="reset" name="sendTask" class="button button3">-</button>
+      </form>  
+    </div>
 </body>
 </html>
