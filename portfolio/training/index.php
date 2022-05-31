@@ -33,11 +33,6 @@ require_once 'connect.php';
             <th>Price</th>
         </tr>
 
-        <?php
-            $products = mysqli_query($connect, query:"SELECT * FROM `products`");
-            $products = mysqli_fetch_all($products);
-            print_r($products);
-        ?>
 
         <tr>
             <td>1</td>
@@ -45,6 +40,15 @@ require_once 'connect.php';
             <td>Lorem ipsum dolor sit amet</td>
             <td>1000</td>
         </tr>
-    </table>    
+    </table>
+
+    <pre>
+        <?php
+            $products = mysqli_query($connect, query:"SELECT * FROM `products`");
+            $products = mysqli_fetch_all($products);
+            print_r($products);
+        ?>
+    </pre>
+    
 </body>
 </html>
