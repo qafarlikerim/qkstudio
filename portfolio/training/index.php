@@ -17,6 +17,7 @@ require_once 'connect.php';
 
     th {
         background: #606060;
+        color: #fff;
     }
 
     td {
