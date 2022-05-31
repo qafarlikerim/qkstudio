@@ -1,8 +1,10 @@
 <?php
 
-$connect = @mysqli_connect('localhost', 'kera_kera', '5813910K', 'addressbook');
+mysqli_report(MYSQLI_REPORT_OFF);
 
-if (!$connect) {
-    error_log('Ошибка соединения: ' . mysqli_connect_error());
+$link = @mysqli_connect('localhost', 'kera_kera', '5813910K', 'addressbook');
+
+if (!$link) {
+    error_log('Ошибка соединения: ' . mysqli_connect_errno());
 }
 ?>
