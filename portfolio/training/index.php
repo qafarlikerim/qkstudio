@@ -1,10 +1,29 @@
 <?php
 
-mysqli_report(MYSQLI_REPORT_OFF);
+require_once 'connect.php';
 
-$connect = mysqli_connect('localhost', 'kera_kera', '5813910K', 'kera_addressbook');
-
-if (!$connect) {
-    die('Error connect to database!');
-}
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Product 1</td>
+            <td>Lorem ipsum dolor sit amet</td>
+            <td>1000</td>
+        </tr>
+    </table>    
+</body>
+</html>
