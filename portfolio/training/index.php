@@ -32,6 +32,13 @@ require_once 'connect.php';
             <th>Description</th>
             <th>Price</th>
         </tr>
+
+        <?php
+            $products = mysqli_query($connect, query:"SELECT * FROM `products`");
+            $products = mysqli_fetch_all($products);
+            print_r($products);
+        ?>
+
         <tr>
             <td>1</td>
             <td>Product 1</td>
