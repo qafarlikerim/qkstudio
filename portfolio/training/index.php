@@ -10,6 +10,19 @@ require_once 'connect.php';
     <meta charset="UTF-8">
     <title>Products</title>
 </head>
+<style>
+    th, td {
+        padding: 10px;
+    }
+
+    th {
+        background: #606060;
+    }
+
+    td {
+        background: #b5b5b5;
+    }
+</style>
 <body>
     <table>
         <tr>
