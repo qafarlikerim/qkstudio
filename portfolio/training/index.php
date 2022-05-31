@@ -33,22 +33,20 @@ require_once 'connect.php';
             <th>Price</th>
         </tr>
 
-
-        <tr>
-            <td>1</td>
-            <td>Product 1</td>
-            <td>Lorem ipsum dolor sit amet</td>
-            <td>1000</td>
-        </tr>
-    </table>
-
-    <pre>
         <?php
             $products = mysqli_query($connect, query:"SELECT * FROM `products`");
             $products = mysqli_fetch_all($products);
-            print_r($products);
+            foreach ($products as $products) {
+                ?>
+                    <tr>
+                        <td><?= $products[0] ?></td>
+                        <td><?= $products[1] ?></td>
+                        <td><?= $products[3] ?></td>
+                        <td><?= $products[2] ?></td>
+                    </tr>
+                <?php
+            }
         ?>
-    </pre>
-    
+    </table>        
 </body>
 </html>
