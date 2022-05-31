@@ -1,7 +1,8 @@
 <?php
 
-$connect = mysqli_connect(host:'localhost', user:'kera_kera', password:'5813910K', database:'addressbook');
+$connect = @mysqli_connect('localhost', 'kera_kera', '5813910K', 'addressbook');
 
 if (!connect) {
-    echo 'Error connect to database!';
+    error_log('Ошибка соединения: ' . mysqli_connect_errno());
 }
+?>
