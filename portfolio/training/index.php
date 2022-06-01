@@ -94,17 +94,14 @@ require_once 'connect.php';
             }
         ?>
     </table>
-    <div class="container">
-      <h1>Список контактов</h1>
-      <form action="/add.php" method="post">
-        <input width="50%" type="text" name="title" id="title" placeholder="Введите титл..." class="form-control">
-        <br>
-        <input type="text" name="description" id="description" placeholder="Введите описание..." class="form-control">
-        <br>
-        <input type="int" name="price" id="price" placeholder="Введите цену..." class="form-control">
-        <br>
-        <button type="submit" name="sendTask" class="button button2">+</button>&nbsp;<button type="reset" name="sendTask" class="button button3">-</button>
-      </form>  
-    </div>
+    <form action="" method="post">
+        <p>Title</p>
+        <input type="text" name="title">
+        <p>Description</p>
+        <textarea name="descriotion"></textarea>
+        <p>Price</p>
+        <input type="number" name="price">
+        <button type="submit">Add new product</button>
+    </form>
 </body>
 </html>
