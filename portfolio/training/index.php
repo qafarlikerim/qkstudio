@@ -64,7 +64,7 @@ require_once 'connect.php';
     }
 </style>
 <body>
-    <table width="50%"  align="center">
+    <table>
         <tr>
             <th>ID</th>
             <th>Title</th>
