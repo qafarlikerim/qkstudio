@@ -93,7 +93,8 @@ require_once 'connect.php';
         <p>Description</p>
         <textarea name="descriotion"></textarea>
         <p>Price</p>
-        <input type="number" name="price">
+        <input type="number" name="price"> 
+        <br><br>
         <button type="submit">Add new product</button>
     </form>
 </body>
