@@ -88,7 +88,7 @@ require_once 'config/connect.php';
         ?>
     </table>
     <h3>Add new product</h3>
-    <form action="" method="post">
+    <form action="vendor/create.php" method="post">
         <p>Title</p>
         <input type="text" name="title">
         <p>Description</p>
