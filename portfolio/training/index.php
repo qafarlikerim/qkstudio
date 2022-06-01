@@ -92,7 +92,7 @@ require_once 'config/connect.php';
         <p>Title</p>
         <input type="text" name="title">
         <p>Description</p>
-        <textarea name="descriotion"></textarea>
+        <textarea name="description"></textarea>
         <p>Price</p>
         <input type="number" name="price"> 
         <br><br>
