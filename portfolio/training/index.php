@@ -1,6 +1,6 @@
 <?php
 
-require_once 'connect.php';
+require_once 'config/connect.php';
 
 ?>
 
@@ -87,6 +87,7 @@ require_once 'connect.php';
             }
         ?>
     </table>
+    <h3>Add new product</h3>
     <form action="" method="post">
         <p>Title</p>
         <input type="text" name="title">
