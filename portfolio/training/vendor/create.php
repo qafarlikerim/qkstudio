@@ -6,4 +6,4 @@ $title = $_POST['title'];
 $description = $_POST['description'];
 $price = $_POST['price'];
 
-mysqli_query($connect, query:"INSERT INTO `products` (`id`, `title`, `price`, `descripsion`) VALUES (NULL, '$title', '$price', '$description')")
+mysqli_query($connect, query:"INSERT INTO `products` (`id`, `title`, `price`, `descripsion`) VALUES (NULL, '$title', '$price', '$description')");
