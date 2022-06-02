@@ -2,7 +2,6 @@
 
     require_once 'config/connect.php';
 
-    $product_id = $_GET['id'];
     $result = $mysqli->query($query);
     while ($row = $result->fetch_assoc()) {
     printf("%s (%s)\n", $row["title"], $row["description"], $row["price"]);
