@@ -3,8 +3,11 @@
     require_once 'config/connect.php';
 
     $product_id = $_GET['id'];
-    $product = mysqli_query($connect, query:"SELECT * FROM `products` WHERE `id` = '$people_id'");
-    $product = mysqli_fetch_assoc($product);
+    $result = $mysqli->query($query);
+    while ($row = $result->fetch_assoc()) {
+    printf("%s (%s)\n", $row["title"], $row["description"], $row["price"]);
+    }
+    
 ?>
 
 
