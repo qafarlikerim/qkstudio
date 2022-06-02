@@ -5,6 +5,7 @@
     $product_id = $_GET['id'];
     $product = mysqli_query($connect, query:"SELECT * FROM `products` WHERE `id` = '$people_id'");
     $product = mysqli_fetch_assoc($product);
+    public mysqli_result::fetch_assoc(): array|null|false
 ?>
 
 
