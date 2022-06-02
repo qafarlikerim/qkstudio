@@ -4,9 +4,7 @@
 
     $product_id = $_GET['id'];
     $product = mysqli_query($connect, query:"SELECT * FROM `products` WHERE `id` = '$people_id'");
-    while ($row = $result->fetch_assoc()) {
-        printf("%s (%s)\n", $row["title"], $row["description"], $row["price"]);
-    }
+    $product = mysqli_fetch_assoc($product);
 ?>
 
 
