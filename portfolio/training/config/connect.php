@@ -7,6 +7,4 @@ $connect = mysqli_connect('localhost', 'kera_kera', '5813910K', 'kera_addressboo
 if (!$connect) {
     die('Error connect to database!');
 }
-
-public mysqli_result::fetch_assoc(): array|null|false
 ?>
