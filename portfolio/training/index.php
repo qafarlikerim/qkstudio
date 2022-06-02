@@ -75,13 +75,14 @@ require_once 'config/connect.php';
         <?php
             $products = mysqli_query($connect, query:"SELECT * FROM `products`");
             $products = mysqli_fetch_all($products);
-            foreach ($products as $products) {
+            foreach ($products as $product) {
                 ?>
                     <tr>
-                        <td><?= $products[0] ?></td>
-                        <td><?= $products[1] ?></td>
-                        <td><?= $products[3] ?></td>
-                        <td><?= $products[2] ?></td>
+                        <td><?= $product[0] ?></td>
+                        <td><?= $product[1] ?></td>
+                        <td><?= $product[3] ?></td>
+                        <td><?= $product[2] ?></td>
+                        <td><a href="update.php?id<?= $product[0] ?>">Update</a></td>
                     </tr>
                 <?php
             }
