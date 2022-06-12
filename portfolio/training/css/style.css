@@ -1,29 +1,12 @@
-body{
-    margin: 0;
+@font-face{
+    font-family: Acidic;
+    src: url(../fonts/Acidic.otf) format(opentype);
 }
-
-.blocks{
-    display: inline-block;
-    background: #272822;
-    color: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-
-#block4{
-    display: inline-block;
-    background: #ff0000;
-    color: #fff;
-    padding: 10px;
-    position: absolute;
-    
-}
-
-#inside{
-    display: inline-block;
-    background: #ff0000;
-    color: #fff;
-    width: 200px;
-    height: 200px;
-    padding: 10px;
+.ad{
+    text-align: center;
+    margin-top: 200px;
+    font-family: Acidic;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
 }
