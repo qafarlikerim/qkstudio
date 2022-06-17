@@ -10,6 +10,10 @@ const pool = mysql2.createPool({
 
 const app = express();
 
+app.get('/', function(req, res) {
+    res.send('success!');
+});
+
 app.listen(3000, function() {
     console.log('server started!');
 });
