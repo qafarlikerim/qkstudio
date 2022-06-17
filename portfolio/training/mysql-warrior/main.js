@@ -12,7 +12,7 @@ const app = express();
 
 app.get('/', function(req, res) {
     pool.query('SELECT * FROM abonents'),then(function(data) {
-        res.json(data);
+        res.json(data[0]);
     });
 });
 
