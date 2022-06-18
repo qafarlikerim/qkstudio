@@ -5,7 +5,7 @@ const pool = mysql2.createPool({
     host: 'localhost',
     user: 'kera_kera',
     database: 'kera_addressbook',
-    password: '5813910K',
+    password: '5813910K'
 });
 
 const app = express();
