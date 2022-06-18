@@ -11,9 +11,9 @@ const pool = mysql2.createPool({
 const app = express();
 
 app.get('/', function(req, res) {
-    pool.query('SELECT * FROM abonents'),then(function(data) {
-        res.json(data[0]);
-    });
+    pool.query('SELECT * FROM abonents'),then((data) => {
+            res.json(data[0]);
+        });
 });
 
 app.listen(3000, function() {
