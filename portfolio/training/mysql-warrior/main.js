@@ -1,7 +1,7 @@
-import express from 'express';
-import { createPool } from 'mysql2/promise';
+const express = require('express');
+const mysql2 = require('mysql2/promise');
 
-const pool = createPool({
+const pool = mysql2.createPool({
     host: 'localhost',
     user: 'kera_kera',
     database: 'kera_addressbook',
@@ -11,9 +11,9 @@ const pool = createPool({
 const app = express();
 
 app.get('/', function(req, res) {
-    pool.query('SELECT * FROM abonents'),then(function (data) {
-            res.json(data[0]);
-        });
+    pool.query('SELECT * FROM abonents'),then(function(data) {
+        res.json(data[0]);
+    });
 });
 
 app.listen(3000, function() {
