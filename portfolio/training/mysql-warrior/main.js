@@ -11,8 +11,16 @@ const pool = mysql2.createPool({
 const app = express();
 
 app.get('/', function(req, res) {
-    pool.query('SELECT * FROM abonents'),then(function(data) {
-        res.json(data[0]);
+    pool.query('SELECT * FROM abonents').then(function(data) {
+        const abonents = data[0];
+        res.send(`<!DOCTYPE html>
+        <html>
+            <body>
+                <ul>
+                    ${abonents.map(abonent => `<li>${abonent.name}</li>`).join('')}
+                </ul>
+            </body>
+        </html>`);
     });
 });
 
