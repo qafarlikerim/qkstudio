@@ -6,6 +6,7 @@ const pool = mysql2.createPool({
     user: 'kera_kera',
     database: 'kera_addressbook',
     password: '5813910K',
+    port: '3306',
 });
 
 const app = express();
