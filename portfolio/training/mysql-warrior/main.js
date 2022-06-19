@@ -1,11 +1,12 @@
 const express = require('express');
 const mysql2 = require('mysql2/promise');
 
-const pool = mysql2.createPool({
+this.pool = mysql2.createPool({
+    connectionLimit: 10,
     host: 'localhost',
     user: 'kera_kera',
-    database: 'kera_addressbook',
     password: '5813910K',
+    database: 'kera_addressbook',
     port: '3306',
 });
 
