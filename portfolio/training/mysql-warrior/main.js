@@ -14,4 +14,12 @@ conn.connect(function (err) {
     else {
         console.log("Подключение к серверу MySQL успешно установилено");
     }
-})
+});
+
+let query="SELECT * FROM abonents";
+
+conn.query(query, (err, result, field) =>{
+    console.log(err);
+    console.log(result);
+     // console.log(field);
+});
