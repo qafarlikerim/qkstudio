@@ -1,12 +1,39 @@
-body{
-    background-color: rgb(255, 255, 255);
+@font-face {
+    font-family: "Amstrong";
+    src: url('../fonts/Amstrong.otf') format('opentype');
 }
 
-.block{
-    position: absolute;
-    left: 0; right: 0; bottom: 0; top: 0;
+.test{
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
     margin: auto;
-    width: 300px;
-    height: 300px;
-    background-color: rgba(255, 0, 0, 1); 
+    width: 600px;
+    height: 400px;
+    background-image:
+    url(../../../images/aypara-v-s-kkizgus-li-ulduz-logo-63D156995F-seeklogo.com.png.svg),
+    linear-gradient(#0098C3 33%, #E00034 33%, #E00034 66%, #00AE65 66%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%, 100%;
+}
+.test2{
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    top: 0%;
+    margin: auto;
+    width: 800px;
+    height: 500px;
+    background-image: radial-gradient(#EEEEEE 40%, #BABABA);
+}
+
+.test2 h1{
+    position: absolute;
+    font: bold 84px Amstrong;
+    left: 35%;
+    text-align: center;
+    margin-top: 200px;
+    color: rgba(0, 0, 0, 0.5);
 }
