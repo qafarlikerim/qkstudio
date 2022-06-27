@@ -1,25 +1,29 @@
-const mysql = require('mysql');
+const express = require('express');
+const mysql2 = require('mysql2/promise');
 
-const conn = mysql.createConnection({
-    host: "localhost",
-    user: "kera_kera",
-    database: "kera_addressbook",
-    password: "5813910K"
+const pool = mysql2.createPool({
+	host: 'localhost',
+	user: 'kera_kera',
+	database: 'kera_addressbook',
+	password: '5813910K',
 });
 
-conn.connect(function (err) {
-    if (err) {
-        return console.error("Ощибка: " + err.message);
-    }
-    else {
-        console.log("Подключение к серверу MySQL успешно установилено");
-    }
+const app = express();
+
+app.get('/', function(req, res) {
+	pool.query('SELECT * FROM abonents').then(function(data) {
+		const abonents = data[0];
+		res.send(`<!DOCTYPE html>
+		<html>
+			<body>
+				<ul>
+					${abonents.map(abonent => `<li>${abonent.name}</li>`).join('')}
+				</ul>
+			</body>
+		</html>`);
+	});
 });
 
-let query="SELECT * FROM abonents";
-
-conn.query(query, (err, result, field) =>{
-    console.log(err);
-    console.log(result);
-     // console.log(field);
+app.listen(3000, function() {
+	console.log('server started!');
 });
